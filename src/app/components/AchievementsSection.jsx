@@ -12,7 +12,7 @@ const AnimatedNumbers = dynamic(
 const achievementsList = [
   {
     metric: "Projects",
-    value: "100",
+    value: "20",
     postfix: "+",
   },
   {
@@ -21,14 +21,41 @@ const achievementsList = [
     value: "100,000",
   },
   {
-    metric: "Awards",
-    value: "7",
-  },
-  {
     metric: "Years",
-    value: "5",
+    value: getYearsSinceJan2022(),
+    postfix: getMonthsSinceJan2022()
   },
 ];
+
+function getYearsSinceJan2022() {
+  const jan2022 = new Date('January 1, 2022');
+  const currentTime = new Date();
+
+  const timeDifference = currentTime - jan2022;
+
+  const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30.44; 
+  const months = timeDifference / millisecondsInMonth;
+
+  const years = Math.floor(months / 12);
+
+  return years;
+}
+
+function getMonthsSinceJan2022() {
+  const jan2022 = new Date('January 1, 2022');
+  const currentTime = new Date();
+
+  const timeDifference = currentTime - jan2022;
+
+  // Convert the time difference to months
+  const millisecondsInMonth = 1000 * 60 * 60 * 24 * 30.44; // average number of days in a month
+  const months = timeDifference / millisecondsInMonth;
+
+  // Return the remaining months
+  const remainingMonths = Math.floor(months % 12);
+
+  return `.${remainingMonths}`;
+}
 
 const AchievementsSection = () => {
   return (

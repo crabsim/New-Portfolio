@@ -9,11 +9,11 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
+        <li>Javascript</li>
+        <li>Html</li>
+        <li>Css</li>
+        <li>Java</li>
+        <li>React Native</li>
         <li>React</li>
       </ul>
     ),
@@ -23,8 +23,15 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>Vellore Institute of Technology, Vellore
+        <span className="text-xs text-[#ADB7BE] block">Bachelor in Technology(B.Tech) Computer Science; CGPA: 9.04</span>
+        </li>
+        <li>Mayo International School
+        <span className="text-xs text-[#ADB7BE] block">12th - CBSE – Percentage: 93.34%</span>
+        </li>
+        <li>Delhi Public School 
+        <span className="text-xs text-[#ADB7BE] block">10th - CBSE – CGPA: 10</span>
+        </li>
       </ul>
     ),
   },
@@ -32,9 +39,10 @@ const TAB_DATA = [
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+      <ul className="list-disc pl-2 gap-2">
+        <li>Frontend Development with React</li>
+        <li>Server Side Development with Nodejs , Express and MongoDBServer Side Development with Nodejs , Express and MongoDB</li>
+        <li>Server Side Development with Nodejs , Express and MongoDBServer Side Development with Nodejs , Express and MongoDB</li>
       </ul>
     ),
   },
@@ -59,8 +67,8 @@ const AboutSection = () => {
           <p className="text-base lg:text-lg">
             I am a full stack web developer with a passion for creating
             interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
+            working with JavaScript, Next, React, Vue, Redux, Java, SQL, Mongo, Elastic, Node.js, Express,
+            HTML, CSS, and Git. I am a quick learner and I am always
             looking to expand my knowledge and skill set. I am a team player and
             I am excited to work with others to create amazing applications.
           </p>

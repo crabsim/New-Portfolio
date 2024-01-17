@@ -7,58 +7,48 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "HungryPixel Website",
+    description: "At HungryPixel, I crafted an engaging website (hungrypixel.com) to spotlight their software solutions, driving a remarkable 30% increase in online visibility through strategic SEO techniques. This platform seamlessly showcases the company's prowess, providing a firsthand experience of their cutting-edge services, ultimately contributing to a 20% boost in client engagement",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Web", "Mobile"],
+    // gitUrl: "/",
+    previewUrl: "https://www.hungrypixel.in/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "Vorby: Student Mentor Consultation App (Internship Project)",
+    description: "Designed and implemented the frontend application for the Vorby app, acting as a guiding beacon for students.The platform facilitates doubt clarification and expert advice, leading to a remarkable improvement of 60% in student academic performance and progression towards their career goals",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/vorbyit/portalfrontend",
+    // previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
+    title: "AutoPedo: Automatic Physiotherapist (Hackathon Project)",
+    description: `Designed and implemented a website for the AutoPedo project, an Automatic Physiotherapist, employing HTML
+    for the frontend and Firebase for the backend. The platform empowers doctors to establish customized exercise
+    parameters, optimizing therapy sessions. Through this automated approach, the physiotherapy treatment process is
+    streamlined, leading to a significant improvement in efficiency and effectiveness. The AutoPedo project has
+    demonstrated a marked reduction of 45% in the time required for therapy sessions, ensuring tailored care and
+    expediting the recovery journey for individuals.`,
+    image: "/images/projects/3.jpeg",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/crabsim/Autopedo",
+    // previewUrl: "/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
+    title: "ICEEY: Messenger for the Blind (Self-Learning Project)",
+    description: `Developed a WebApp leveraging Web Speech APIs to facilitate interactive messaging and socializing for individuals
+    with visual impairments, significantly enhancing accessibility and inclusivity. The implementation resulted in a
+    measurable improvement of 25% in user engagement and satisfaction, showcasing the positive impact on the
+    targeted user community.`,
+    image: "/images/projects/4.jpeg",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/crabsim/Messaging-for-the-Blind",
   },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+  
 ];
 
 const ProjectsSection = () => {
@@ -101,7 +91,7 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
